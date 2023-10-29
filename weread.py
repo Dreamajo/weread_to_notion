@@ -394,7 +394,11 @@ if __name__ == "__main__":
                 continue
             book = book.get("book")
             title = book.get("title")
-            cover = book.get("cover") if cover.endswith('.jpg') else cover + '.jpg'
+            cover = book.get("cover")
+            if cover.endswith(".jpg"):
+                pass
+            else:
+                cover = cover + ".jpg"
             bookId = book.get("bookId")
             author = book.get("author")
             check(bookId)
